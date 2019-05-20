@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F81239BA-3C6F-403D-A87C-91295970CE76}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Integra_7_Xamarin.Droid</RootNamespace>
+    <AssemblyName>Integra_7_Xamarin.Android</AssemblyName>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <MandroidI18n />
+    <AndroidSupportedAbis>armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.8</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.6.0.344457</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Plugins.Clipboard">
+      <Version>2.2.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="MIDI.cs" />
+    <Compile Include="MyFileIO.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="USB.cs" />
+    <Compile Include="UsbReceiver.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Resources\drawable-xxxhdpi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\INTEGRA_7_Xamarin\INTEGRA_7_Xamarin.csproj">
+      <Project>{203C3783-6C88-4F8F-9FDB-7719BF7B10EA}</Project>
+      <Name>INTEGRA_7_Xamarin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_pkginfo.txt" />
+    <Content Include="ToDo.txt" />
+    <AndroidResource Include="Resources\drawable\center.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\doubledownleftarrow.png" />
+    <AndroidResource Include="Resources\drawable\doubledownleftdownarrow.png" />
+    <AndroidResource Include="Resources\drawable\doubledownleftleftarrow.png" />
+    <AndroidResource Include="Resources\drawable\doubledownrightarrow.png" />
+    <AndroidResource Include="Resources\drawable\doubledownrightdownarrow.png" />
+    <AndroidResource Include="Resources\drawable\doubledownrightrightarrow.png" />
+    <AndroidResource Include="Resources\drawable\doubleleftarrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\doublerightarrow.png" />
+    <AndroidResource Include="Resources\drawable\doubleuparrow.png" />
+    <AndroidResource Include="Resources\drawable\doubleupleftarrow.png" />
+    <AndroidResource Include="Resources\drawable\doubleupleftleftarrow.png" />
+    <AndroidResource Include="Resources\drawable\doubleuplefttoparrow.png" />
+    <AndroidResource Include="Resources\drawable\doubleuprightarrow.png" />
+    <AndroidResource Include="Resources\drawable\doubleuprightrightarrow.png" />
+    <AndroidResource Include="Resources\drawable\doubleuprighttoparrow.png" />
+    <AndroidResource Include="Resources\drawable\downarrow.png" />
+    <AndroidResource Include="Resources\drawable\downleftarrow.png" />
+    <AndroidResource Include="Resources\drawable\downrightarrow.png" />
+    <AndroidResource Include="Resources\drawable\leftarrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\missingimage.png" />
+    <AndroidResource Include="Resources\drawable\motionalsurround.png" />
+    <AndroidResource Include="Resources\drawable\rightarrow.png" />
+    <AndroidResource Include="Resources\drawable\uparrow.png" />
+    <AndroidResource Include="Resources\drawable\upleftarrow.png" />
+    <AndroidResource Include="Resources\drawable\uprightarrow.png" />
+    <AndroidResource Include="Resources\drawable\velocitycurve0off.png" />
+    <AndroidResource Include="Resources\drawable\velocitycurve0on.png" />
+    <AndroidResource Include="Resources\drawable\velocitycurve1off.png" />
+    <AndroidResource Include="Resources\drawable\velocitycurve1on.png" />
+    <AndroidResource Include="Resources\drawable\velocitycurve2off.png" />
+    <AndroidResource Include="Resources\drawable\velocitycurve2on.png" />
+    <AndroidResource Include="Resources\drawable\velocitycurve3off.png" />
+    <AndroidResource Include="Resources\drawable\velocitycurve3on.png" />
+    <AndroidResource Include="Resources\drawable\velocitycurve4off.png" />
+    <AndroidResource Include="Resources\drawable\velocitycurve4on.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_01_eqalizer_00.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_01_eqalizer_00_.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_2voicepitchshifter.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_3tappandelay.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_4tappandelay.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_autopan.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_autowah.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_bitcrasher.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_chorus.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_chorustodelay.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_chorustoflanger.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_common_01.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_common_02.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_common_03.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_compressor.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_delay.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_distorsion.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_distorsiontochorus.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_distorsiontodelay.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_distortiontoflanger.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_enhancertochorus.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_enhancertodelay.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_enhancertoflanger.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_epampsimtochorus.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_epampsimtodelay.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_epampsimtoflanger.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_epampsimtophaser.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_epampsimtotremolo.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_flanger.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_flangertodelay.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_gate.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_guitarampsimtochorus.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_guitarampsimtodelay.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_guitarampsimtofhaser.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_guitarampsimtoflanger.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_guitarampsimulator.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_hexachorus.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_humanizer.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_infinitephaser.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_limiter.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_loficompress.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_mfx.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_modulationdelay.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_multistagephaser.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_multitapdelay.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_oddstoautowah.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_oddstotouchwah.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_overdrive.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_overdrivetochorus.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_overdrivetodelay.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_overdrivetoflanger.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_phaser1.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_phaser2and3.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_pitchshifter.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_reversedelay.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_ringmodulator.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_rotary1.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_rotary2.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_rotary3.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_slicer.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_spaced.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_speakersimulator.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_spectrum.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_stepflanger.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_stepphaser.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_timectrldelay.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_tremolo.png" />
+    <AndroidResource Include="Resources\drawable\_mfx_tremolochorus.png" />
+    <AndroidResource Include="Resources\drawable\_missingimage.png" />
+    <AndroidResource Include="Resources\drawable\_pcm_d_01.png" />
+    <AndroidResource Include="Resources\drawable\_pcm_d_wmt_01.png" />
+    <AndroidResource Include="Resources\drawable\_pcm_d_wmt_02.png" />
+    <AndroidResource Include="Resources\drawable\_pcm_d_wmt_03.png" />
+    <AndroidResource Include="Resources\drawable\_pcm_d_wmt_04.png" />
+    <AndroidResource Include="Resources\drawable\_pcm_01.png" />
+    <AndroidResource Include="Resources\drawable\_pcm_lfo_01.png" />
+    <AndroidResource Include="Resources\drawable\_pcm_tvf_10.png" />
+    <AndroidResource Include="Resources\drawable\_pcm_tvf_11.png" />
+    <AndroidResource Include="Resources\drawable\_pcm_tvf_12.png" />
+    <AndroidResource Include="Resources\drawable\_pcm_tvf_13.png" />
+    <AndroidResource Include="Resources\drawable\_pcm_tvf_14.png" />
+    <AndroidResource Include="Resources\drawable\_pcm_tvf_15.png" />
+    <AndroidResource Include="Resources\drawable\_pcm_tvf_16.png" />
+    <AndroidResource Include="Resources\drawable\_pcm_tvf_17.png" />
+    <AndroidResource Include="Resources\drawable\_pmt_01.png" />
+    <AndroidResource Include="Resources\drawable\_pmt_02.png" />
+    <AndroidResource Include="Resources\drawable\_pmt_03.png" />
+    <AndroidResource Include="Resources\drawable\_pmt_04.png" />
+    <AndroidResource Include="Resources\drawable\_pmt_05.png" />
+    <AndroidResource Include="Resources\drawable\_pmt_06.png" />
+    <AndroidResource Include="Resources\drawable\_pmt_07.png" />
+    <AndroidResource Include="Resources\drawable\_pmt_08.png" />
+    <AndroidResource Include="Resources\drawable\_pmt_09.png" />
+    <AndroidResource Include="Resources\drawable\_pmt_10.png" />
+    <AndroidResource Include="Resources\drawable\_sn_a_01.png" />
+    <AndroidResource Include="Resources\drawable\_sn_d_01.png" />
+    <AndroidResource Include="Resources\drawable\_sns_01.png" />
+    <AndroidResource Include="Resources\drawable\_sns_filter_00.png" />
+    <AndroidResource Include="Resources\drawable\_sns_filter_03.png" />
+    <AndroidResource Include="Resources\drawable\_sns_filter_04.png" />
+    <AndroidResource Include="Resources\drawable\_sns_osc_01.png" />
+    <AndroidResource Include="Resources\drawable\_sns_osc_02.png" />
+    <AndroidResource Include="Resources\drawable\_sns_osc_03.png" />
+    <AndroidResource Include="Resources\drawable\_sns_osc_04.png" />
+    <AndroidResource Include="Resources\drawable\_sns_osc_05.png" />
+    <AndroidResource Include="Resources\drawable\_sns_osc_06.png" />
+    <AndroidResource Include="Resources\drawable\_sns_osc_07.png" />
+    <AndroidResource Include="Resources\drawable\_sns_osc_09.png" />
+    <AndroidResource Include="Resources\drawable\_sns_osc_10.png" />
+    <AndroidResource Include="Resources\drawable\_sns_osc_11.png" />
+    <AndroidResource Include="Resources\drawable\_sns_osc_12.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_common_01.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_cutofffreqenv_02.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_pitchenv_01.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_pitchenv_02.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_pitch_01.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_pitch_pan_01.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_pitch_time_01.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_tvalevelenv_02.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_tvf_00.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_tvf_01.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_tvf_02.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_tvf_03.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_tvf_04.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_tvf_05.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_tvf_06.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_wave_01.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_wave_02.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_wave_03.png" />
+    <AndroidResource Include="Resources\drawable\__pcm_wave_04.png" />
+    <AndroidResource Include="Resources\drawable\__pmt_11.png" />
+    <AndroidResource Include="Resources\drawable\__sns_filter_01.png" />
+    <AndroidResource Include="Resources\drawable\__sns_filter_02.png" />
+    <AndroidResource Include="Resources\drawable\__sns_misc_01.png" />
+    <AndroidResource Include="Resources\drawable\__sns_osc_08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\doubledownarrow.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>
